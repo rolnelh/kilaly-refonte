@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* Personnalisation des points de navigation pour rester discret */
+        .swiper-pagination-bullet {
+            background: #cbd5e1;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #1e5da1 !important;
+            width: 24px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+    </style>
+
+</head>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body>
+
+    <header class="sticky top-0 z-50 w-full">
+        <nav class="bg-[#1e5da1] px-6 py-4 sticky top-0 z-50 shadow-md">
+            <div class="container mx-auto flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="images/logo_kilaly.png" alt="Kilaly Logo"
+                        class="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105">
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8 text-white text-sm font-medium tracking-wide">
+                    <a href="#" class="hover:text-blue-200 transition-colors border-b-2 border-white pb-1">Accueil</a>
+                    <a href="#services" class="hover:text-blue-200 transition-colors">Nos Services</a>
+                    <a href="#mission" class="hover:text-blue-200 transition-colors">Notre Mission</a>
+                    <a href="#temoignages" class="hover:text-blue-200 transition-colors">Témoignages</a>
+                    <a href="#contact"
+                        class="bg-white text-[#1e5da1] px-6 py-2 rounded-full hover:bg-blue-50 transition-all shadow-sm transform hover:scale-105 active:scale-95">
+                        Nous contacter
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none p-2">
+                        <svg id="hamburger-icon" class="w-8 h-8 transition-all duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-[#1e5da1] z-40 flex flex-col items-center justify-center space-y-8 text-white text-xl font-light transform translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+                <button id="close-menu" class="absolute top-6 right-8 text-white text-4xl">&times;</button>
+
+                <a href="#" class="mobile-link hover:text-blue-200">Accueil</a>
+                <a href="#" class="mobile-link hover:text-blue-200">Nos Services</a>
+                <a href="#" class="mobile-link hover:text-blue-200">Notre Mission</a>
+                <a href="#" class="mobile-link hover:text-blue-200">Témoignages</a>
+                <a href="#contact" class="mobile-link bg-white text-[#1e5da1] px-10 py-3 rounded-full font-bold">Nous
+                    contacter</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="relative pt-20 pb-16 lg:pt-32 lg:pb-32 bg-white overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+
+            <h1 class="text-5xl md:text-7xl font-normal text-slate-900 leading-[1.1] mb-8 max-w-5xl mx-auto"
+                data-aos="fade-up">
+                Réussir vos études et votre
+                <span class="relative inline-block text-[#1e5da1]">
+                    carrière
+                    <svg class="absolute -bottom-2 left-0 w-full h-4 text-blue-200 opacity-70" viewBox="0 0 322 12"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9C108.5 2.5 220.5 2.5 319 9" stroke="currentColor" stroke-width="8"
+                            stroke-linecap="round" />
+                    </svg>
+                </span>
+                en France.
+            </h1>
+
+            <p class="text-xl text-slate-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+                L'accompagnement complet pour les étudiants africains. De l'inscription à l'université jusqu'à
+                l'obtention de votre premier emploi, nous sommes à vos côtés.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#"
+                    class="w-full sm:w-auto px-10 py-4 bg-[#1e5da1] text-white font-semibold rounded-full shadow-2xl hover:bg-blue-700 transition-all hover:scale-105 active:scale-95"
+                    data-aos="zoom-in-up">
+                    Commencer mon projet
+                </a>
+
+                <!-- <a href="#"
+                    class="w-full sm:w-auto px-10 py-4 bg-white text-slate-900 font-semibold rounded-full border border-slate-200 hover:bg-slate-50 flex items-center justify-center gap-3 transition-all"
+                    data-aos="zoom-in-up">
+                    Nos services
+                </a> -->
+            </div>
+
+        </div>
+
+        <div class="fixed bottom-6 right-6 z-[100] flex items-end gap-3 group">
+            <div
+                class="bg-white dark:bg-slate-800 px-4 py-2 rounded-xl shadow-lg border border-gray-100 dark:border-slate-700 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                Besoin d'aide ?
+            </div>
+            <button
+                class="w-14 h-14 bg-blue-600 rounded-full shadow-2xl flex items-center justify-center text-white text-2xl hover:scale-110 transition-transform cursor-pointer">
+                <i class="fa fa-comments"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-16 gap-x-4 relative">
+
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-5xl md:text-6xl font-light text-slate-900 mb-4 tracking-tighter">
+                        500<span class="text-[#1e5da1] font-semibold">+</span>
+                    </span>
+                    <p class="text-[10px] font-bold tracking-[0.3em] text-slate-400 uppercase text-center">
+                        Étudiants suivis
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-5xl md:text-6xl font-light text-slate-900 mb-4 tracking-tighter">
+                        98<span class="text-[#1e5da1] font-semibold">%</span>
+                    </span>
+                    <p class="text-[10px] font-bold tracking-[0.3em] text-slate-400 uppercase text-center">
+                        Succès Visa
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-5xl md:text-6xl font-light text-slate-900 mb-4 tracking-tighter">
+                        15<span class="text-[#1e5da1] font-semibold">+</span>
+                    </span>
+                    <p class="text-[10px] font-bold tracking-[0.3em] text-slate-400 uppercase text-center">
+                        Partenariats
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-center group" data-aos="fade-up" data-aos-delay="400">
+                    <span class="text-5xl md:text-6xl font-light text-slate-900 mb-4 tracking-tighter">
+                        24<span class="text-[#1e5da1] font-semibold">h</span>
+                    </span>
+                    <p class="text-[10px] font-bold tracking-[0.3em] text-slate-400 uppercase text-center">
+                        Réactivité
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-[0.3em] text-[#1e5da1] uppercase mb-4">Valeurs</h2>
+                <h3 class="text-3xl md:text-5xl font-light text-slate-900">Pourquoi nous faire <span
+                        class="font-semibold italic">confiance</span> ?</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#1e5da1] group-hover:text-white transition-all duration-500">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Communauté</h4>
+                    <p class="text-slate-500 font-light leading-relaxed text-sm">
+                        Rejoignez un réseau d'étudiants qui partagent les mêmes défis et ambitions que vous.
+                    </p>
+                </div>
+
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#1e5da1] group-hover:text-white transition-all duration-500">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Sérénité</h4>
+                    <p class="text-slate-500 font-light leading-relaxed text-sm">
+                        Oubliez le "calvaire" administratif. Nous sécurisons chaque étape de votre mobilité.
+                    </p>
+                </div>
+
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#1e5da1] group-hover:text-white transition-all duration-500">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Expertise</h4>
+                    <p class="text-slate-500 font-light leading-relaxed text-sm">
+                        Des collaborations directes avec les universités et des experts en mobilité internationale.
+                    </p>
+                </div>
+
+                <div class="group" data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:bg-[#1e5da1] group-hover:text-white transition-all duration-500">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-3">Motivation</h4>
+                    <p class="text-slate-500 font-light leading-relaxed text-sm">
+                        Plus qu'un dossier, nous vous conseillons pour réussir votre projet de vie en France.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50 overflow-hidden" id="mission">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+
+                <div class="w-full lg:w-1/2" data-aos="fade-right">
+                    <div class="relative group">
+                        <div class="overflow-hidden rounded-2xl">
+                            <img src="https://media.istockphoto.com/id/2184850383/fr/photo/de-jeunes-%C3%A9tudiants-universitaires-heureux-souriant-et-regardant-la-cam%C3%A9ra-samusant-ensemble.webp?a=1&b=1&s=612x612&w=0&k=20&c=nLLMBH_Kpa0XkbthldOjNAlbWyBYI_j9U2v8_ZavVUI="
+                                alt="Étudiants Kilaly"
+                                class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -right-6 w-full h-full border border-slate-100 rounded-2xl -z-10">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2" data-aos="fade-left">
+                    <span class="text-[10px] font-bold tracking-[0.4em] text-[#1e5da1] uppercase mb-6 block">
+                        Notre Vision
+                    </span>
+
+                    <h3 class="text-4xl md:text-5xl font-light text-slate-900 mb-8 leading-[1.2]">
+                        Un partenaire de confiance pour votre <span class="font-semibold italic">réussite en
+                            France</span>.
+                    </h3>
+
+                    <div class="space-y-6 text-slate-500 font-light leading-relaxed text-lg mb-10">
+                        <p>
+                            Kilaly est né d'une conviction simple : aucun étudiant ne devrait voir ses ambitions
+                            freinées par la complexité administrative.
+                        </p>
+                        <p>
+                            Nous avons transformé notre propre expérience en une méthode d'accompagnement rigoureuse,
+                            articulée autour de trois piliers : l'orientation, la gestion et l'insertion.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#1e5da1]"></div>
+                            <span class="text-sm font-medium text-slate-700">Accompagnement A à Z</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-1.5 h-1.5 rounded-full bg-[#1e5da1]"></div>
+                            <span class="text-sm font-medium text-slate-700">Réseau d'experts</span>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="group inline-flex items-center text-sm font-bold tracking-widest text-slate-900 uppercase">
+                        Découvrir notre histoire
+                        <span
+                            class="ml-4 w-12 h-[1px] bg-slate-200 group-hover:w-16 group-hover:bg-[#1e5da1] transition-all duration-300"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white" id="services">
+        <div class="container mx-auto px-6">
+            <div class="mb-16 max-w-3xl">
+                <h2 class="text-4xl md:text-5xl font-light text-slate-900 leading-tight">
+                    Comment nous vous <span class="font-semibold text-[#1e5da1]">accompagnons</span> ?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-slate-100 pt-12">
+
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">01.</span>
+                    <h3 class="text-xl font-medium text-slate-900">Démarches administratives</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Soutien complet pour vos dossiers de visa et inscriptions. Nous simplifions la bureaucratie pour
+                        vous.
+                    </p>
+                </div>
+
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">02.</span>
+                    <h3 class="text-xl font-medium text-slate-900">Recherches d'emploi</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Optimisation de votre profil pour le marché français. CV, LinkedIn et préparation aux
+                        entretiens.
+                    </p>
+                </div>
+
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="500">
+                    <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">03.</span>
+                    <h3 class="text-xl font-medium text-slate-900">Recherches de formation</h3>
+                    <p class="text-slate-500 font-light leading-relaxed">
+                        Conseils stratégiques sur le choix de vos études selon vos ambitions professionnelles.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white overflow-hidden" id="temoignages">
+        <div class="container mx-auto px-6">
+
+            <div class="mb-16" data-aos="fade-up">
+                <h2 class="text-xs font-bold tracking-[0.3em] text-slate-400 uppercase mb-4">Témoignages</h2>
+                <h3 class="text-3xl md:text-5xl font-light text-slate-900 leading-tight">
+                    Ils nous ont fait <span class="font-semibold italic">confiance</span>.
+                </h3>
+            </div>
+
+            <div class="swiper testimonialSwiper pb-16" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div
+                            class="group p-6 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 h-full flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="text-[#1e5da1] text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity italic">
+                                    “</div>
+                                <p class="text-slate-600 text-md font-light font-normal leading-relaxed mb-8">
+                                    L'accompagnement pour mon visa a été irréprochable. Kilaly a su transformer un
+                                    stress administratif en une simple formalité.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Amadou S.</h4>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider">Université de Bordeaux
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="group p-6 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 h-full flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="text-[#1e5da1] text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity italic">
+                                    “</div>
+                                <p class="text-slate-600 text-md font-light font-normal leading-relaxed mb-8">
+                                    Le coaching pour ma recherche d'alternance m'a permis de décrocher 3 entretiens en
+                                    une semaine. Une méthode vraiment efficace.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Fatoumata B.</h4>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider">HETIC Paris</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="group p-6 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 h-full flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="text-[#1e5da1] text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity italic">
+                                    “</div>
+                                <p class="text-slate-600 text-md font-light font-normal leading-relaxed mb-8">
+                                    Grâce à Kilaly, j'ai trouvé mon logement avant même d'arriver en France. Un gain de
+                                    temps et d'énergie inestimable.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Koffi A.</h4>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider">INSA Lyon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div
+                            class="group p-6 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 h-full flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="text-[#1e5da1] text-4xl mb-6 opacity-20 group-hover:opacity-100 transition-opacity italic">
+                                    “</div>
+                                <p class="text-slate-600 text-md font-light font-normal leading-relaxed mb-8">
+                                    Grâce à Kilaly, j'ai trouvé mon logement avant même d'arriver en France. Un gain de
+                                    temps et d'énergie inestimable.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm">Koffi A.</h4>
+                                    <p class="text-xs text-slate-400 uppercase tracking-wider">INSA Lyon</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination mt-16 pt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-20">
+
+                <div class="lg:w-1/3 space-y-8" data-aos="fade-right">
+                    <h2 class="text-4xl font-light text-slate-900 leading-tight">
+                        Parlons de votre <span class="font-semibold border-b-2 border-[#1e5da1]">projet</span>.
+                    </h2>
+                    <p class="text-slate-500 font-light">
+                        Nous sommes là pour vous aider avec vos démarches administratives, recherche d'emploi et
+                        formation en France.
+                    </p>
+                    <div class="pt-8 space-y-4">
+                        <p class="text-sm uppercase tracking-widest text-slate-400 font-bold">Contact direct</p>
+                        <a href="mailto:tine.keita@kilaly.com"
+                            class="block text-xl font-medium text-slate-900 hover:text-[#1e5da1] transition-colors">tine.keita@kilaly.com</a>
+                        <p class="text-slate-900">+33 6 05 61 97 82</p>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3" data-aos="fade-left" data-aos-delay="200">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="relative">
+                            <input type="text" id="first_name" name="first_name" placeholder="Votre prénom"
+                                class="w-full py-4 bg-transparent border-b border-slate-200 focus:border-[#1e5da1] outline-none transition-colors placeholder-slate-300 font-light">
+                        </div>
+
+                        <div class="relative">
+                            <input type="text" id="last_name" name="last_name" placeholder="Votre nom"
+                                class="w-full py-4 bg-transparent border-b border-slate-200 focus:border-[#1e5da1] outline-none transition-colors placeholder-slate-300 font-light">
+                        </div>
+
+                        <div class="md:col-span-2 relative">
+                            <input type="email" id="email" name="email" placeholder="Adresse email"
+                                class="w-full py-4 bg-transparent border-b border-slate-200 focus:border-[#1e5da1] outline-none transition-colors placeholder-slate-300 font-light">
+                        </div>
+
+                        <div class="md:col-span-2 relative">
+                            <textarea id="message" name="message" rows="4" placeholder="Votre message"
+                                class="w-full py-4 bg-transparent border-b border-slate-200 focus:border-[#1e5da1] outline-none transition-colors placeholder-slate-300 font-light resize-none"></textarea>
+                        </div>
+
+                        <div class="md:col-span-2 pt-6">
+                            <button type="submit"
+                                class="group flex items-center gap-4 text-lg font-semibold text-slate-900 hover:text-[#1e5da1] transition-all cursor-pointer">
+                                Envoyer la demande
+                                <span
+                                    class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-[#1e5da1] group-hover:bg-[#1e5da1] group-hover:text-white transition-all shadow-sm">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+                <div class="flex items-center gap-6">
+                    <img src="images/logo_kilaly.png" alt="Kilaly"
+                        class="h-8 w-auto grayscale opacity-80 hover:opacity-100 transition-opacity">
+                    <span class="text-xs text-slate-400 font-light tracking-widest uppercase">
+                        © 2026 — Kilaly
+                    </span>
+                </div>
+
+                <nav class="flex items-center gap-8">
+                    <a href="#"
+                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Démarches</a>
+                    <a href="#"
+                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Emploi</a>
+                    <a href="#"
+                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Formation</a>
+                    <a href="#"
+                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Contact</a>
+                </nav>
+
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-slate-400 hover:text-black transition-colors">
+                        <span class="text-[10px] font-bold uppercase tracking-tighter">Tk.</span>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-[#0077b5] transition-colors">
+                        <span class="text-[10px] font-bold uppercase tracking-tighter">Li.</span>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-pink-600 transition-colors">
+                        <span class="text-[10px] font-bold uppercase tracking-tighter">In.</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        AOS.init({
+            duration: 800, // Durée de l'animation en ms
+            once: true,    // L'animation ne se joue qu'une seule fois
+            offset: 100,   // Déclenche l'animation 100px avant que l'élément soit visible
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".testimonialSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            grabCursor: true,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1280: { slidesPerView: 3 },
+            },
+        });
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const closeBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Fonction pour ouvrir/fermer
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        };
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // Fermer le menu automatiquement quand on clique sur un lien (pour les ancres comme #contact)
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
+
+</body>
+
+</html>
