@@ -4,25 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kilaly | Réussir vos études en France</title>
 
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
-        /* Personnalisation des points de navigation pour rester discret */
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            /* Fixe ton problème de scroll horizontal */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         .swiper-pagination-bullet {
             background: #cbd5e1;
             opacity: 1;
@@ -35,18 +44,8 @@
             transition: all 0.3s;
         }
     </style>
-
 </head>
 
-<style>
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
 
 <body>
 
@@ -269,13 +268,36 @@
 
                 <div class="w-full lg:w-1/2" data-aos="fade-right">
                     <div class="relative group">
-                        <div class="overflow-hidden rounded-2xl">
-                            <img src="https://media.istockphoto.com/id/2184850383/fr/photo/de-jeunes-%C3%A9tudiants-universitaires-heureux-souriant-et-regardant-la-cam%C3%A9ra-samusant-ensemble.webp?a=1&b=1&s=612x612&w=0&k=20&c=nLLMBH_Kpa0XkbthldOjNAlbWyBYI_j9U2v8_ZavVUI="
-                                alt="Étudiants Kilaly"
-                                class="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div class="grid grid-cols-2 gap-4 rounded-2xl overflow-hidden">
+
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="https://img.freepik.com/photos-gratuite/groupe-cinq-etudiants-africains-passant-du-temps-ensemble-campus-cour-universite-amis-afro-noirs-etudiant-banc-articles-scolaires-ordinateurs-portables-cahiers_627829-6042.jpg?semt=ais_hybrid&w=740&q=80"
+                                    alt="Étudiants"
+                                    class="w-full h-[280px] object-cover hover:scale-110 transition-transform duration-700">
+                            </div>
+
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="https://leboursier.net/wp-content/uploads/2023/08/Bourses-pour-etudiants-dAfrique-francophone-1-scaled-1.jpg"
+                                    alt="Groupe"
+                                    class="w-full h-[280px] object-cover hover:scale-110 transition-transform duration-700">
+                            </div>
+
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="https://st.depositphotos.com/1011643/2013/i/450/depositphotos_20130467-stock-photo-beautiful-female-african-american-university.jpg"
+                                    alt="Travail"
+                                    class="w-full h-[280px] object-cover hover:scale-110 transition-transform duration-700">
+                            </div>
+
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="https://www.info-afrique.com/wp-content/uploads/2013/03/diplomes-africains.jpg"
+                                    alt="Succès"
+                                    class="w-full h-[280px] object-cover hover:scale-110 transition-transform duration-700">
+                            </div>
+
                         </div>
+
                         <div
-                            class="absolute -bottom-6 -right-6 w-full h-full border border-slate-100 rounded-2xl -z-10">
+                            class="absolute -bottom-4 -right-4 w-full h-full border border-slate-200 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500 bg-gray-100">
                         </div>
                     </div>
                 </div>
@@ -290,7 +312,7 @@
                             France</span>.
                     </h3>
 
-                    <div class="space-y-6 text-slate-500 font-light leading-relaxed text-lg mb-10">
+                    <div class="space-y-6 text-slate-900 font-normal leading-relaxed text-lg mb-10">
                         <p>
                             Kilaly est né d'une conviction simple : aucun étudiant ne devrait voir ses ambitions
                             freinées par la complexité administrative.
@@ -334,8 +356,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-slate-100 pt-12">
 
-                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-                    <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">01.</span>
+                <div class="space-y-4 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 text-[#1e5da1] mb-2">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic block">01.</span>
                     <h3 class="text-xl font-medium text-slate-900">Démarches administratives</h3>
                     <p class="text-slate-500 font-light leading-relaxed">
                         Soutien complet pour vos dossiers de visa et inscriptions. Nous simplifions la bureaucratie pour
@@ -344,6 +375,13 @@
                 </div>
 
                 <div class="space-y-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 text-[#1e5da1] mb-2">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
                     <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">02.</span>
                     <h3 class="text-xl font-medium text-slate-900">Recherches d'emploi</h3>
                     <p class="text-slate-500 font-light leading-relaxed">
@@ -353,6 +391,15 @@
                 </div>
 
                 <div class="space-y-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-12 h-12 text-[#1e5da1] mb-2">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                            </path>
+                        </svg>
+                    </div>
                     <span class="text-xs font-bold tracking-widest text-slate-300 uppercase italic">03.</span>
                     <h3 class="text-xl font-medium text-slate-900">Recherches de formation</h3>
                     <p class="text-slate-500 font-light leading-relaxed">
@@ -467,7 +514,7 @@
                     </div>
 
                 </div>
-                <div class="swiper-pagination mt-16 pt-8"></div>
+                <!-- <div class="swiper-pagination mt-16 pt-32"></div> -->
             </div>
         </div>
     </section>
@@ -534,39 +581,55 @@
         </div>
     </section>
 
-    <footer class="bg-white py-12 border-t border-slate-100">
+    <footer class="bg-white pt-16 pb-8 border-t border-slate-100">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex flex-col items-center text-center">
 
-                <div class="flex items-center gap-6">
-                    <img src="images/logo_kilaly.png" alt="Kilaly"
-                        class="h-8 w-auto grayscale opacity-80 hover:opacity-100 transition-opacity">
-                    <span class="text-xs text-slate-400 font-light tracking-widest uppercase">
-                        © 2026 — Kilaly
-                    </span>
+                <div class="mb-8" data-aos="fade-up">
+                    <h2 class="text-2xl font-bold text-[#1e5da1] tracking-tight">kilaly<span
+                            class="text-amber-400">.</span></h2>
+                    <p class="text-slate-400 text-sm mt-2 max-w-xs mx-auto">Votre passerelle de confiance pour réussir
+                        vos études et votre insertion en France.</p>
                 </div>
 
-                <nav class="flex items-center gap-8">
+                <div class="flex justify-center space-x-4 mb-10" data-aos="fade-up" data-aos-delay="100">
                     <a href="#"
-                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Démarches</a>
+                        class="w-11 h-11 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-[#1e5da1] hover:text-white transition-all duration-300 shadow-sm border border-slate-100">
+                        <i class="fa fa-instagram text-lg"></i>
+                    </a>
                     <a href="#"
-                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Emploi</a>
+                        class="w-11 h-11 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-[#1e5da1] hover:text-white transition-all duration-300 shadow-sm border border-slate-100">
+                        <i class="fa fa-linkedin text-lg"></i>
+                    </a>
                     <a href="#"
-                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Formation</a>
+                        class="w-11 h-11 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-[#1e5da1] hover:text-white transition-all duration-300 shadow-sm border border-slate-100">
+                        <i class="fa fa-facebook text-lg"></i>
+                    </a>
                     <a href="#"
-                        class="text-xs text-slate-500 hover:text-[#1e5da1] uppercase tracking-widest transition-colors">Contact</a>
+                        class="w-11 h-11 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-[#1e5da1] hover:text-white transition-all duration-300 shadow-sm border border-slate-100">
+                        <i class="fa fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+
+                <nav class="w-full max-w-auto mb-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="grid grid-cols-2 gap-y-5 gap-x-4 md:flex md:justify-center md:space-x-10">
+                        <a href="#accueil"
+                            class="text-slate-600 hover:text-[#1e5da1] text-xs font-bold tracking-[0.15em] uppercase transition-colors">Accueil</a>
+                        <a href="#mission"
+                            class="text-slate-600 hover:text-[#1e5da1] text-xs font-bold tracking-[0.15em] uppercase transition-colors">Notre
+                            Mission</a>
+                        <a href="#services"
+                            class="text-slate-600 hover:text-[#1e5da1] text-xs font-bold tracking-[0.15em] uppercase transition-colors">Nos
+                            Services</a>
+                        <a href="#contact"
+                            class="text-slate-600 hover:text-[#1e5da1] text-xs font-bold tracking-[0.15em] uppercase transition-colors">Contact</a>
+                    </div>
                 </nav>
 
-                <div class="flex items-center gap-6">
-                    <a href="#" class="text-slate-400 hover:text-black transition-colors">
-                        <span class="text-[10px] font-bold uppercase tracking-tighter">Tk.</span>
-                    </a>
-                    <a href="#" class="text-slate-400 hover:text-[#0077b5] transition-colors">
-                        <span class="text-[10px] font-bold uppercase tracking-tighter">Li.</span>
-                    </a>
-                    <a href="#" class="text-slate-400 hover:text-pink-600 transition-colors">
-                        <span class="text-[10px] font-bold uppercase tracking-tighter">In.</span>
-                    </a>
+                <div class="w-full h-px bg-slate-100 mb-8"></div>
+
+                <div class="text-slate-400 text-[11px] uppercase tracking-widest font-medium">
+                    © 2026 — <span class="text-[#1e5da1]">Kilaly France</span>. Tous droits réservés.
                 </div>
 
             </div>
@@ -574,23 +637,26 @@
     </footer>
 
 
-    <script>
-        AOS.init({
-            duration: 800, // Durée de l'animation en ms
-            once: true,    // L'animation ne se joue qu'une seule fois
-            offset: 100,   // Déclenche l'animation 100px avant que l'élément soit visible
-        });
-    </script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
-        new Swiper(".testimonialSwiper", {
+        // 2. Initialisation AOS (Animations au scroll)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+
+        // 3. Initialisation Swiper (Témoignages)
+        const swiper = new Swiper(".testimonialSwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
             grabCursor: true,
             loop: true,
-            autoplay: { delay: 4000, disableOnInteraction: false },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -600,25 +666,28 @@
                 1280: { slidesPerView: 3 },
             },
         });
-    </script>
 
-    <script>
+        // 4. Gestion du Menu Mobile
         const menuBtn = document.getElementById('mobile-menu-button');
         const closeBtn = document.getElementById('close-menu');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        // Fonction pour ouvrir/fermer
         const toggleMenu = () => {
             mobileMenu.classList.toggle('translate-x-full');
+            // Optionnel : Empêcher le scroll du body quand le menu est ouvert
+            document.body.classList.toggle('overflow-hidden');
         };
 
         menuBtn.addEventListener('click', toggleMenu);
         closeBtn.addEventListener('click', toggleMenu);
 
-        // Fermer le menu automatiquement quand on clique sur un lien (pour les ancres comme #contact)
+        // Fermeture automatique lors du clic sur un lien
         mobileLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.classList.remove('overflow-hidden');
+            });
         });
     </script>
 
